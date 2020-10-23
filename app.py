@@ -10,5 +10,11 @@ def recommend_movies():
         res = recommendation.results(request.args.get('title'))
         return jsonify(res)
 
+# from recommender.modeling.prediction import results
+#
+# def recommend_movies():
+#         res = results(request.args.get('title'))
+#         return jsonify(res)
+
 if __name__=='__main__':
         app.run(port = 5000, debug = True)
