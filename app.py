@@ -3,6 +3,7 @@ from flask_cors import CORS
 import recommendation
 from recommender.modeling.prediction import results
 from flask_restplus import Api, Resource, fields
+import os
 
 flask_app = Flask(__name__)
 app = Api(app=flask_app,
@@ -66,4 +67,5 @@ class MainClass(Resource):
 
 
 if __name__ == '__main__':
-    app.run(port=5000, debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
