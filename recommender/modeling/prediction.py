@@ -3,7 +3,6 @@ from recommender.data_cleaning.combine import combine_data
 from recommender.feature_engineering.transform import transform_data
 from recommender.modeling.recommend import recommend_movies
 
-
 def results(movie_name):
     movie_name = movie_name.lower()
 
